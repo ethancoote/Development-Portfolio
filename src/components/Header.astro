@@ -1,0 +1,19 @@
+---
+import MenuButton from "./buttons/MenuButton.astro";
+import "../styles/global.css";
+---
+
+<header class="flex w-fit bg-neutral-800 px-6 py-3 rounded-lg mt-2 justify-self-center">
+    <div class="flex text-neutral-400 gap-8">
+        <a href="/" class="flex group shrink-0 gap-2 hover:text-neutral-100 transition-[0.3s] hover:cursor-pointer select-none items-center">
+            <svg class="fill-neutral-400 group-hover:fill-neutral-100 transition-[0.3s]" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.00858 0.229881C9.3305 -0.0766271 9.83617 -0.0766271 10.1581 0.229881L16.8247 6.57909L18.9081 8.56325C19.2413 8.88058 19.2542 9.40808 18.9367 9.74142C18.6194 10.0747 18.0919 10.0875 17.7586 9.77008L17.0833 9.127V15.4167C17.0833 16.3372 16.3372 17.0833 15.4167 17.0833H11.25H7.91667H3.75C2.82953 17.0833 2.08333 16.3372 2.08333 15.4167V9.127L1.40805 9.77008C1.07477 10.0875 0.547293 10.0747 0.229887 9.74142C-0.0875183 9.40808 -0.0746533 8.88058 0.258622 8.56325L2.34195 6.57909L9.00858 0.229881ZM3.75 7.53966V15.4167H7.08333V11.25C7.08333 9.86925 8.20258 8.75 9.58333 8.75C10.9641 8.75 12.0833 9.86925 12.0833 11.25V15.4167H15.4167V7.53966L9.58333 1.98412L3.75 7.53966ZM10.4167 15.4167V11.25C10.4167 10.7897 10.0436 10.4167 9.58333 10.4167C9.12308 10.4167 8.75 10.7897 8.75 11.25V15.4167H10.4167Z" fill-opacity="1"/>
+            </svg>
+            <p>Ethan Coote</p>
+        </a>
+        <MenuButton text="Projects" href="/#projects" />
+        <MenuButton text="Experience" href="/#experience" />
+        <MenuButton text="Stack" href="/#stack" />
+        <MenuButton text="Contact" href="/#contact" />
+    </div>
+</header>
