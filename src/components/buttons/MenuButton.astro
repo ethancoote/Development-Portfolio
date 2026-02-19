@@ -1,7 +1,7 @@
 ---
-const {text, href} = Astro.props;
+const {text, href, fontSize, addClasses=""} = Astro.props;
 ---
 
-<a href={href} class="flex group shrink-0 gap-2 hover:text-neutral-100 transition-[0.3s] hover:cursor-pointer select-none items-center">
-    <p>{text}</p>
+<a href={href} class=`flex group shrink-0 gap-2 hover:text-neutral-100 transition-[0.3s] hover:cursor-pointer select-none items-center ${addClasses}`>
+    <p class=`text-[${fontSize}]`>{text}</p>
 </a>

@@ -1,9 +1,10 @@
 ---
-import MenuButton from "./buttons/MenuButton.astro";
+import MenuItems from "./MenuItems.astro";
+import MenuButton from "./buttons/MenuButton.astro"
 import "../styles/global.css";
 ---
 
-<header class="flex w-fit bg-neutral-800 px-6 py-3 rounded-lg mt-2 justify-self-center">
+<header class="hidden w-fit bg-neutral-800 px-6 py-3 rounded-lg mt-4 justify-self-center sm:flex">
     <div class="flex text-neutral-400 gap-8">
         <a href="/" class="flex group shrink-0 gap-2 hover:text-neutral-100 transition-[0.3s] hover:cursor-pointer select-none items-center">
             <svg class="fill-neutral-400 group-hover:fill-neutral-100 transition-[0.3s]" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg" >
@@ -11,9 +12,19 @@ import "../styles/global.css";
             </svg>
             <p>Ethan Coote</p>
         </a>
-        <MenuButton text="Projects" href="/#projects" />
-        <MenuButton text="Experience" href="/#experience" />
-        <MenuButton text="Stack" href="/#stack" />
-        <MenuButton text="Contact" href="/#contact" />
+        <div class="w-[1px] h-full bg-neutral-700"></div>
+        <MenuItems fontSize="16px" />
     </div>
 </header>
+
+<header class="flex sm:hidden">
+    <div class="fixed top-6 right-6 z-10" id="btn-menu">
+        <img src="./images/open.svg" alt="open button" class="w-8">
+    </div>
+    <div class="flex opacity-0 flex-col text-neutral-300 gap-6 items-center w-full pt-24 bg-neutral-800 h-[100vh] transition-[0.3s] pointer-events-none" id="mobile-menu">
+        <MenuButton text="Ethan Coote" href="/" fontSize="32px" addClasses="mobile-menu-button"/>
+        <MenuItems fontSize="32px" addClasses="mobile-menu-button"/>
+    </div>
+</header>
+
+<script src="../scripts/menu.ts"></script>

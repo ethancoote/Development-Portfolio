@@ -1,0 +1,10 @@
+---
+import MenuButton from "./buttons/MenuButton.astro";
+
+const { fontSize, addClasses="" } = Astro.props;
+---
+
+<MenuButton text="Projects" href="/#projects" fontSize={fontSize} addClasses={addClasses}/>
+<MenuButton text="Experience" href="/#experience" fontSize={fontSize} addClasses={addClasses}/>
+<MenuButton text="Stack" href="/#stack" fontSize={fontSize} addClasses={addClasses}/>
+<MenuButton text="Contact" href="/#contact" fontSize={fontSize} addClasses={addClasses}/>
