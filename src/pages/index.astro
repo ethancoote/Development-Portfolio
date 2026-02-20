@@ -1,5 +1,7 @@
 ---
 import Header from '../components/Header.astro';
+import Skill from '../components/Skill.astro';
+import Button from '../components/buttons/Button.astro';
 ---
 
 <html lang="en">
@@ -13,6 +15,24 @@ import Header from '../components/Header.astro';
 	</head>
 	<body class="bg-neutral-900">
 		<Header />
-		<h1>Astro</h1>
+		<main class="flex justify-center min-h-screen items-center">
+			<div class="flex flex-col text-center pb-12 px-6 gap-6 items-center">
+				<h1 class="text-5xl text-neutral-100 font-semibold sm:text-7xl">Ethan Coote</h1>
+				<p class="text-[20px] font-regular text-neutral-400 max-w-[600px] ">I’m a web developer based in Guelph ON, Canada. I specialize in UI/UX and front-end development.</p>
+				<div class="flex flex-wrap gap-3 sm:gap-4 justify-center">
+					<Skill text="Javascript" src="./images/icons/js-icon.svg" alt="javascript icon"/>
+					<Skill text="Typescript" src="./images/icons/ts-icon.svg" alt="typescript icon"/>
+					<Skill text="HTML5" src="./images/icons/html-icon.svg" alt="html5 icon"/>
+					<Skill text="CSS" src="./images/icons/css-icon.svg" alt="css icon"/>
+					<Skill text="React.js" src="./images/icons/react-icon.svg" alt="react.js icon"/>
+					<Skill text="Astro" src="./images/icons/astro-icon.svg" alt="astro icon"/>
+				</div>
+				<div class="flex flex-col w-full gap-3 justify-center items-center sm:flex-row sm:gap-4">
+					<Button text="Get in Touch" href="/#contact" id="primary"/>
+					<Button text="About Me" href="/#experience" id="secondary"/>
+				</div>
+				
+			</div>
+		</main>
 	</body>
 </html>

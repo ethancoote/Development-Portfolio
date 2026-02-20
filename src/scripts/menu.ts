@@ -5,7 +5,6 @@ const mobileMenu = document.querySelector("#mobile-menu") as HTMLElement;
 
 let menuOpen = false;
 menuBtnElem?.addEventListener("click", () => {
-    console.log(menuOpen);
     if (menuOpen) {
         menuOpen = false;
         mobileMenu.style.opacity = "0%";
