@@ -1,8 +1,7 @@
 ---
 const {text, href, fontSize, addClasses=""} = Astro.props;
-const fontClass = `text-${fontSize}`;
 ---
 
 <a href={href} class=`flex group shrink-0 gap-2 hover:text-neutral-100 transition-[0.3s] hover:cursor-pointer select-none items-center ${addClasses}`>
-    <p class={fontClass}>{text}</p>
+    <p class={fontSize}>{text}</p>
 </a>

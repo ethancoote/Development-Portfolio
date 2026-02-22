@@ -1,0 +1,63 @@
+---
+import Skill from '../components/Skill.astro';
+const { img, title, date, role, text, link } = Astro.props;
+
+---
+
+<a class="flex flex-col text-neutral-100 group hover:bg-neutral-800 rounded-lg transition duration-250 p-3" href={link} target="_blank">
+    <div class="h-fit w-full p-0 m-auto mb-2 relative">
+        <p class=" opacity-0 absolute z-2 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl group-hover:opacity-100 transition duration-250">View Project >></p>
+        <img class="rounded-md  group-hover:brightness-[0.3] transition duration-250 border-neutral-800 border group-hover:border-transparent" src={img} alt={`${title} mockup`}>
+    </div>
+    
+    <div class="flex w-full justify-between">
+        <h3 class="text-2xl">{title}</h3>
+        <p class="text-neutral-400 text-xl">{date}</p>
+    </div>
+    <p class="text-neutral-400 text-xl mb-4">{role}</p>
+    <p class="text-neutral-400 text-lg">{text}</p>
+
+    <div class="flex gap-2 mt-4 flex-wrap">
+        {title === "NHL Rank" && 
+            <Skill text="JavaScript" src="./images/icons/js-icon.svg" alt="javascript icon"/>
+            <Skill text="React.js" src="./images/icons/react-icon.svg" alt="react.js icon"/>
+            <Skill text="Github Actions" src="./images/icons/github-icon.svg" alt="github icon"/>
+            <Skill text="HTML5" src="./images/icons/html-icon.svg" alt="html5 icon"/>
+            <Skill text="CSS" src="./images/icons/css-icon.svg" alt="css icon"/>  
+        }
+        {title === "Painters Near Me" && 
+            <Skill text="JavaScript" src="./images/icons/js-icon.svg" alt="javascript icon"/>
+            <Skill text="Astro" src="./images/icons/astro-icon.svg" alt="astro icon"/>
+            <Skill text="Netlify" src="./images/icons/netlify-icon.svg" alt="netlify icon"/>
+            <Skill text="HTML5" src="./images/icons/html-icon.svg" alt="html5 icon"/>
+            <Skill text="CSS" src="./images/icons/css-icon.svg" alt="css icon"/>  
+        }
+        {title === "True Auto Detailing" && 
+            <Skill text="Framer" src="./images/icons/framer-icon.svg" alt="framer icon"/>
+            <Skill text="React.js" src="./images/icons/react-icon.svg" alt="react.js icon"/>
+            <Skill text="TypeScript" src="./images/icons/ts-icon.svg" alt="typescript icon"/>
+            <Skill text="HTML5" src="./images/icons/html-icon.svg" alt="html5 icon"/>
+            <Skill text="CSS" src="./images/icons/css-icon.svg" alt="css icon"/>
+            <Skill text="Screaming Frog" src="./images/icons/sf-icon.webp" alt="screaming frog icon"/>
+        }
+        {title === "Chalkie AI" && 
+            <Skill text="Framer" src="./images/icons/framer-icon.svg" alt="framer icon"/>
+            <Skill text="React.js" src="./images/icons/react-icon.svg" alt="react.js icon"/>
+            <Skill text="TypeScript" src="./images/icons/ts-icon.svg" alt="typescript icon"/>
+            <Skill text="Screaming Frog" src="./images/icons/sf-icon.webp" alt="screaming frog icon"/>
+            <Skill text="Ahrefs" src="./images/icons/ahrefs-icon.svg" alt="ahrefs icon"/>
+        }
+        {title === "NY Curls" && 
+            <Skill text="JavaScript" src="./images/icons/js-icon.svg" alt="javascript icon"/>
+            <Skill text="HTML5" src="./images/icons/html-icon.svg" alt="html5 icon"/>
+            <Skill text="CSS" src="./images/icons/css-icon.svg" alt="css icon"/>  
+            <Skill text="Firebase" src="./images/icons/firebase-icon.svg" alt="firebase icon"/> 
+        }
+        {title === "The BIM Builders" && 
+            <Skill text="Framer" src="./images/icons/framer-icon.svg" alt="framer icon"/>
+            <Skill text="React.js" src="./images/icons/react-icon.svg" alt="react.js icon"/>
+            <Skill text="TypeScript" src="./images/icons/ts-icon.svg" alt="typescript icon"/>
+        }
+    </div>
+    
+</a>
