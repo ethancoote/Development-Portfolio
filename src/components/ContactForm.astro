@@ -1,0 +1,10 @@
+---
+import LabelInput from "./LabelInput.astro"
+---
+
+<form class="text-xl text-neutral-300 flex flex-col gap-1" action="https://formsubmit.co/51130691dfe5784717d73395fb003b01" method="POST">
+    <LabelInput label="Full Name" type="text" id="name" required={true}/>
+    <LabelInput label="Email" type="email" id="email" required={true}/>
+    <LabelInput label="Message" type="textarea" id="message" />
+    <button type="submit" class="border-nautral-300 border-1 py-2 rounded-md hover:bg-neutral-100 hover:text-neutral-900 hover:border-neutral-100 transition duration-250 hover:cursor-pointer">Send</button>
+</form>

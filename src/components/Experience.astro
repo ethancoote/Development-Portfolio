@@ -1,0 +1,31 @@
+---
+const { role, company, years, content = "" } = Astro.props;
+---
+
+<div class="flex flex-col border text-neutral-800 bg-neutral-800 rounded-lg">
+    <div class="flex flex-col text-xl gap-1 px-4 pt-3">
+        <p class="text-neutral-200 text-2xl">{role}</p>
+        <p class="mb-4 text-neutral-400">{company} &nbsp; • &nbsp; {years}</p>
+    </div>
+    <div class="flex flex-col w-full h-fit text-neutral-400 text-md sm:text-lg p-4 sm:p-6 bg-neutral-900 rounded-bl-lg rounded-br-lg gap-1">
+        {content !== "" && <p>{content}</p>}
+
+        {company === "Independent Contractor" && 
+            <ul class="list-disc sm:pl-8 pl-5 flex-col flex gap-2">
+                <li>Designed, developed, and maintained responsive websites for businesses in Canada, United Kingdom, United States, and India. </li>
+                <li>Provided on-page and technical SEO through site audits and implementation of best practices.</li>
+                <li>Modified and optimized websites for performance, meeting benchmarks for core web vital (LCP, TBT, FID, etc.) </li>
+                <li>Ensured timely delivery of high quality work while maintaining excellent customer communication and satisfaction. </li>
+            </ul>
+        }
+
+        {company === "Semtech" &&
+            <ul class="list-disc sm:pl-8 pl-5  flex-col flex gap-2">
+                <li>Collaborated with a large team to develop web-based tools to improve engineering workflow. </li>
+                <li>Developed systems connecting web tools with GitLab servers to integrate data automatically. </li>
+                <li>Designed and developed front-end website UI using Python and Flask. </li>
+            </ul>
+        }
+        
+    </div>
+</div>

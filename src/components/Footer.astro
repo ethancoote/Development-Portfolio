@@ -1,31 +1,44 @@
-<footer class="mainFooter" id="mainFooter">
-    <div class="container top">
-        <div class="box">
-            <div class="logoDiv">
-                <a href="/#home"><img src="/images/logo.svg" alt="company logo"></a>
-                <div class="box logo">
-                    <p>Ethan Coote</p>
-                    <p class="logoSmall subtextWhite">Web Developer</p>
+---
+import Icon from './buttons/Icon.astro';
+import MenuButton from './buttons/MenuButton.astro';
+---
+<footer class="w-full h-fit bg-neutral-950 flex justify-center">
+<div class="flex flex-col w-full h-fit px-5 py-12 pt-24 sm:px-9 max-w-[1400px] justify-center gap-4 scroll-mt-16 mb-24" id="contact">
+    <div class="flex flex-col gap-6">
+        
+        <div class="flex gap-8 w-full flex-col md:flex-row">
+            <div class="flex flex-col w-full gap-4 text-xl text-neutral-500 justify-center items-center text-center sm:items-start sm:text-start">
+                <div class="flex flex-col">
+                    <h1 class="text-2xl text-neutral-400 font-regular">Ethan Coote</h1>
+                    <p class="font-regular">Web Developer</p>
+                </div>
+                <p>I’m a web developer living in Guelph ON, Canada. I specialize in UI/UX and front-end development.</p>
+                <div class="flex gap-4 mt-2">
+                    <Icon 
+                        href="https://github.com/ethancoote" 
+                        src="./images/icons/github-icon.svg"
+                        alt="github icon"
+                    />
+                    <Icon 
+                        href="mailto:ecoote456@gmail.com" 
+                        src="./images/icons/mail-icon.svg"
+                        alt="mailto icon"
+                    />
                 </div>
             </div>
-            <p class="subtextWhite pSmall">Cold calling, emailing, and Facebook <i>can</i> get you clients, but it's inconsistent and time consuming. Don’t waste time and money looking for leads. Let your customers come to you.</p>
-            <!-- <div class="box acrossTrue">
-                <a href="/#hero"><img class="socialLogo" src="images/logoipsum-1.png" alt="placeholder social logo" loading="lazy" height="32" width="32"></a>
-                <a href="/#hero"><img class="socialLogo" src="images/logoipsum-2.png" alt="placeholder social logo" loading="lazy" height="32" width="32"></a>
-                <a href="/#hero"><img class="socialLogo" src="images/logoipsum-3.png" alt="placeholder social logo" loading="lazy" height="32" width="32"></a>
-            </div>-->
-            <div class="divider lightBack"></div>
-            <p class="pSmall" style="color: hsla(0,0%,100%, 0.5)">Copyright &copy Ethan Coote Web Development 2026</p>
+            <div class="flex flex-col w-full gap-2 text-neutral-500 text-lg items-center sm:items-start">
+                <p class="text-neutral-400">Navigation</p>
+                <div class="flex flex-col w-fit gap-2 items-center sm:items-start">
+                    <MenuButton text="Projects" href="/#projects"/>
+                    <MenuButton text="Experience" href="/#experience"/>
+                    <MenuButton text="Tech Stack" href="/#stack"/>
+                    <MenuButton text="Contact" href="/#contact"/>
+                </div>
+                
+            </div>
         </div>
-        <div class="box">
-            <p class="white">Navigation</p>
-            <ul class="navigationMenu down footerMenu">
-                <li><a href="/#home"><p class="pSmall">Home</p></a></li>
-                <li><a href="/#about"><p class="pSmall">About</p></a></li>
-                <!--li><a href="/#pricing"><p class="pSmall">Pricing</p></a></li-->
-                <li><a href="/#contact"><p class="pSmall">Contact</p></a></li>
-                <li><a href="/#portfolio"><p class="pSmall">Portfolio</p></a></li>
-            </ul>
-        </div>
+        <div class="h-[1px] w-full bg-neutral-700"></div>
+        <p class="text-lg text-neutral-600 self-center text-center">Copyright © Ethan Coote Web Development</p>
     </div>
+</div>
 </footer>

@@ -1,0 +1,17 @@
+---
+const { label, id, type, required = false } = Astro.props;
+
+if (required) {
+    const requiredAttr = "required";
+} else {
+    const requiredAttr = "";
+}
+---
+
+<label for={id}>{label}</label>
+
+{type === "textarea" ?
+<textarea class="bg-neutral-800 mb-4 p-2 rounded-md border border-neutral-700 text-lg" name={id} id={id} rows="3" {required}></textarea>
+: 
+<input class="bg-neutral-800 mb-4 p-2 rounded-md border border-neutral-700 text-lg" type={type} name={id} id={id} {required}>
+}
