@@ -1,0 +1,27 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/buttons/Button.astro';
+import '../styles/global.css';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>404 | Ethan Coote</title>
+	</head>
+	<body class="flex flex-col bg-neutral-900 items-center">
+		<Header />
+		<main class="min-h-screen flex flex-col gap-4 items-center px-5 sm:px-9 w-full max-w-[1400px] justify-center text-center">
+            <h1 class="text-8xl text-neutral-100">404</h1>
+            <h2 class="text-3xl text-neutral-300">Oops... Page Not Found.</h2>
+            <p class="text-xl text-neutral-400 mb-2">The page you are looking for does not exist, or was moved.</p>
+            <Button text="Return Home" href="/" id="secondary"/>
+		</main>
+		<Footer />
+	</body>
+</html>
