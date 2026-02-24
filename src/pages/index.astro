@@ -69,7 +69,7 @@ import '../styles/global.css';
 				<p class="text-neutral-300 text-xl">University of Guelph</p>
 			</div>
 			<Experience role="Web Designer & Developer" company="Independent Contractor" years="2025 - present" />
-			<Experience role="Text Engineering Intern" company="Semtech" years="2021 - 2023" />
+			<Experience role="Test Engineering Intern" company="Semtech" years="2021 - 2023" />
 			
 
 		</section>
@@ -79,50 +79,61 @@ import '../styles/global.css';
 			<div class="flex flex-col gap-6">
 				<h3 class="text-neutral-100 text-4xl sm:text-5xl">Tech <span class="text-neutral-400">Stack.</span></h3>
 				<div class="h-[1px] w-full bg-neutral-700"></div>
-				<div class="flex flex-col gap-2 w-full h-fit">
-					
-					<p class="text-neutral-500 text-xl">Languages</p>
-					<div class="flex flex-wrap gap-2 mb-2">
-						<Skill text="JavaScript" src="./images/icons/js-icon.svg" alt="javascript icon"/>
-						<Skill text="TypeScript" src="./images/icons/ts-icon.svg" alt="typescript icon"/>
-						<Skill text="HTML5" src="./images/icons/html-icon.svg" alt="html5 icon"/>
-						<Skill text="CSS" src="./images/icons/css-icon.svg" alt="css icon"/> 
+				<div class="flex gap-8">
+					<div class="flex flex-col gap-2 w-full h-fit">
+						<p class="text-neutral-500 text-xl">Languages</p>
+						<div class="flex flex-wrap gap-2 mb-2">
+							<Skill text="JavaScript" src="./images/icons/js-icon.svg" alt="javascript icon" addClasses="skillHover hover:cursor-default" />
+							<Skill text="TypeScript" src="./images/icons/ts-icon.svg" alt="typescript icon" addClasses="skillHover hover:cursor-default" />
+							<Skill text="HTML5" src="./images/icons/html-icon.svg" alt="html5 icon" addClasses="skillHover hover:cursor-default" />
+							<Skill text="CSS" src="./images/icons/css-icon.svg" alt="css icon" addClasses="skillHover hover:cursor-default" /> 
+						</div>
+						<p class="text-neutral-500 text-xl">Front-End</p>
+						<div class="flex flex-wrap gap-2 mb-2">
+							<Skill text="React.js" src="./images/icons/react-icon.svg" alt="react.js icon" addClasses="skillHover hover:cursor-default"  />
+							<Skill text="Astro" src="./images/icons/astro-icon.svg" alt="astro icon" addClasses="skillHover hover:cursor-default" />
+							<Skill text="TailwindCSS" src="./images/icons/tailwindcss-icon.svg" alt="tailwindcss icon" addClasses="skillHover hover:cursor-default" />
+						</div>
+						<p class="text-neutral-500 text-xl">Back-End</p>
+						<div class="flex flex-wrap gap-2 mb-2">
+							<Skill text="Node.js" src="./images/icons/node-icon.svg" alt="node.js icon" addClasses="skillHover hover:cursor-default" />
+							<Skill text="Express.js" src="./images/icons/express-icon.svg" alt="express.js icon" addClasses="skillHover hover:cursor-default" />
+							<Skill text="Next.js" src="./images/icons/next-icon.svg" alt="next.js icon" addClasses="skillHover hover:cursor-default" />
+							<Skill text="Firebase" src="./images/icons/firebase-icon.svg" alt="firebase icon" addClasses="skillHover hover:cursor-default" />
+							<Skill text="MySQL" src="./images/icons/mysql-icon.svg" alt="mysql icon" addClasses="skillHover hover:cursor-default" />
+						</div>
+						<p class="text-neutral-500 text-xl">SEO</p>
+						<div class="flex flex-wrap gap-2 mb-2">
+							<Skill text="Screaming Frog" src="./images/icons/sf-icon.svg" alt="screaming frog icon" addClasses="skillHover hover:cursor-default" />
+							<Skill text="Ahrefs" src="./images/icons/ahrefs-icon.svg" alt="ahrefs icon" addClasses="skillHover hover:cursor-default" />
+						</div>
+						<p class="text-neutral-500 text-xl">Hosting</p>
+						<div class="flex flex-wrap gap-2 mb-2">
+							<Skill text="Firebase Hosting" src="./images/icons/firebase-icon.svg" alt="firebase icon" addClasses="skillHover hover:cursor-default" />
+							<Skill text="Netlify" src="./images/icons/netlify-icon.svg" alt="netlify icon" addClasses="skillHover hover:cursor-default" />
+							<Skill text="Github Pages" src="./images/icons/github-icon.svg" alt="github icon" addClasses="skillHover hover:cursor-default" />
+						</div>
+						<p class="text-neutral-500 text-xl">Other</p>
+						<div class="flex flex-wrap gap-2 mb-2">
+							<Skill text="Framer" src="./images/icons/framer-icon.svg" alt="framer icon" addClasses="skillHover hover:cursor-default" />
+							<Skill text="Github Actions" src="./images/icons/github-icon.svg" alt="github icon" addClasses="skillHover hover:cursor-default" />
+							<Skill text="Git" src="./images/icons/git-icon.svg" alt="git icon" addClasses="skillHover hover:cursor-default" />
+							<Skill text="Figma" src="./images/icons/figma-icon.svg" alt="figma icon" addClasses="skillHover hover:cursor-default" />
+							<Skill text="Docker" src="./images/icons/docker-icon.svg" alt="docker icon" addClasses="skillHover hover:cursor-default" />
+						</div>
+						
 					</div>
-					<p class="text-neutral-500 text-xl">Front-End</p>
-					<div class="flex flex-wrap gap-2 mb-2">
-						<Skill text="React.js" src="./images/icons/react-icon.svg" alt="react.js icon"/>
-						<Skill text="Astro" src="./images/icons/astro-icon.svg" alt="astro icon"/>
-						<Skill text="TailwindCSS" src="./images/icons/tailwindcss-icon.svg" alt="tailwindcss icon"/>
+					<div class=" hidden md:flex items-center justify-center w-full flex-col gap-2 ">
+						<div class="w-fit h-fit border border-neutral-800 rounded-lg overflow-clip">
+							<div class=" w-[256px] h-[256px] flex items-center justify-center bg-neutral-800">
+								<img src="./images/icons/js-icon.svg" alt="javascript icon" class="h-[156px] rounded-lg" id="skill-img">
+							</div>
+							<p class="text-2xl text-neutral-300 m-2 text-center mb-3" id="skill-text">Javascript</p>
+						</div>
+							
 					</div>
-					<p class="text-neutral-500 text-xl">Back-End</p>
-					<div class="flex flex-wrap gap-2 mb-2">
-						<Skill text="Node.js" src="./images/icons/node-icon.svg" alt="node.js icon"/>
-						<Skill text="Express.js" src="./images/icons/express-icon.svg" alt="express.js icon"/>
-						<Skill text="Next.js" src="./images/icons/next-icon.svg" alt="next.js icon"/>
-						<Skill text="Firebase" src="./images/icons/firebase-icon.svg" alt="firebase icon"/>
-						<Skill text="MySQL" src="./images/icons/mysql-icon.svg" alt="mysql icon"/>
-					</div>
-					<p class="text-neutral-500 text-xl">SEO</p>
-					<div class="flex flex-wrap gap-2 mb-2">
-						<Skill text="Screaming Frog" src="./images/icons/sf-icon.webp" alt="screaming frog icon"/>
-						<Skill text="Ahrefs" src="./images/icons/ahrefs-icon.svg" alt="ahrefs icon"/>
-					</div>
-					<p class="text-neutral-500 text-xl">Hosting</p>
-					<div class="flex flex-wrap gap-2 mb-2">
-						<Skill text="Firebase Hosting" src="./images/icons/firebase-icon.svg" alt="firebase icon"/>
-						<Skill text="Netlify" src="./images/icons/netlify-icon.svg" alt="netlify icon"/>
-						<Skill text="Github Pages" src="./images/icons/github-icon.svg" alt="github icon"/>
-					</div>
-					<p class="text-neutral-500 text-xl">Other</p>
-					<div class="flex flex-wrap gap-2 mb-2">
-						<Skill text="Framer" src="./images/icons/framer-icon.svg" alt="framer icon"/>
-						<Skill text="Github Actions" src="./images/icons/github-icon.svg" alt="github icon"/>
-						<Skill text="Git" src="./images/icons/git-icon.svg" alt="git icon"/>
-						<Skill text="Figma" src="./images/icons/figma-icon.svg" alt="figma icon"/>
-						<Skill text="Docker" src="./images/icons/docker-icon.svg" alt="docker icon"/>
-					</div>
-					
 				</div>
+				
 			</div>
 		</section>
 
@@ -173,6 +184,6 @@ import '../styles/global.css';
 		</section>
 
 		<Footer />
-		
+		<script src="../scripts/skillHover.ts"></script>
 	</body>
 </html>
