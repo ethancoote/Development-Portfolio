@@ -21,10 +21,11 @@ import "../styles/global.css";
 <div class="flex fixed sm:hidden top-6 right-6 z-11 " id="btn-menu">
     <img src="./images/open.svg" alt="open button" class="w-8" id="burger-img">
 </div>
-<nav class="flex fixed sm:hidden opacity-0 flex-col text-neutral-300 gap-6 items-center w-full pt-24 bg-neutral-800 h-[100vh] transition-[0.3s] pointer-events-none z-10" id="mobile-menu">
+<header class="flex fixed sm:hidden opacity-0 flex-col text-neutral-300 gap-6 items-center w-full pt-24 bg-neutral-800 h-[100vh] transition-[0.3s] pointer-events-none z-10" id="mobile-menu">
     <MenuButton text="Ethan Coote" href="/#hero" fontSize="text-3xl" addClasses="mobile-menu-button"/>
     <MenuItems fontSize="text-3xl" addClasses="mobile-menu-button"/>
-</nav>
+</header>
+
 
 
 <script src="../scripts/menu.ts"></script>
